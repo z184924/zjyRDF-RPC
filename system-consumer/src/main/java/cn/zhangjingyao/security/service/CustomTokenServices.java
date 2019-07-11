@@ -5,7 +5,7 @@ import cn.zhangjingyao.entity.system.User;
 import cn.zhangjingyao.service.system.RoleService;
 import cn.zhangjingyao.service.system.UserService;
 import cn.zhangjingyao.util.RightsHelper;
-import jdk.nashorn.internal.ir.annotations.Reference;
+import org.apache.dubbo.config.annotation.Reference;
 import org.springframework.security.oauth2.common.DefaultOAuth2AccessToken;
 import org.springframework.security.oauth2.common.DefaultOAuth2RefreshToken;
 import org.springframework.security.oauth2.common.OAuth2AccessToken;

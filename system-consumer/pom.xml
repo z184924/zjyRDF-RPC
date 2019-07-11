@@ -17,6 +17,11 @@
             <artifactId>system-facade</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
+        <dependency>
+            <groupId>cn.zhangjingyao</groupId>
+            <artifactId>system-security</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
     </dependencies>
 
     <build>

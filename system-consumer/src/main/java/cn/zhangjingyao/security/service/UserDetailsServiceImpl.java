@@ -2,7 +2,8 @@ package cn.zhangjingyao.security.service;
 
 import cn.zhangjingyao.entity.PageData;
 import cn.zhangjingyao.service.system.UserService;
-import jdk.nashorn.internal.ir.annotations.Reference;
+import org.apache.dubbo.config.annotation.Reference;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.authority.AuthorityUtils;
 import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;

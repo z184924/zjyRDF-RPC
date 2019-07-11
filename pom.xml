@@ -18,6 +18,7 @@
         <module>system-provider</module>
         <module>system-facade</module>
         <module>system-consumer</module>
+        <module>system-security</module>
     </modules>
 
     <parent>
@@ -88,7 +89,7 @@
         <dependency>
             <groupId>org.springframework.security.oauth.boot</groupId>
             <artifactId>spring-security-oauth2-autoconfigure</artifactId>
-            <version>2.1.1.RELEASE</version>
+            <version>2.1.5.RELEASE</version>
         </dependency>
 
         <!--log4j2-->

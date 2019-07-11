@@ -77,28 +77,28 @@ public class ResourceServerConfiguration extends ResourceServerConfigurerAdapter
         ;
     }
 
-    private class CustomAccessDeniedHandler implements AccessDeniedHandler{
+    private class CustomAccessDeniedHandler implements AccessDeniedHandler {
         @Override
         public void handle(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse, AccessDeniedException e) throws IOException, ServletException {
             httpServletResponse.setStatus(HttpStatus.FORBIDDEN.value());
             String message = e.getMessage();
             HashMap<String,Object> responseData=new HashMap<>(16);
             responseData.put("state","error");
-            responseData.put("error",HttpStatus.FORBIDDEN.value());
+            responseData.put("error", HttpStatus.FORBIDDEN.value());
             responseData.put("errorMessage",message);
             responseData.put("message","该用户无权限访问");
             WriteJsonUtil.writeJson(httpServletResponse, responseData);
         }
     }
 
-    private class CustomAuthenticationEntryPoint implements AuthenticationEntryPoint{
+    private class CustomAuthenticationEntryPoint implements AuthenticationEntryPoint {
         @Override
         public void commence(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse, AuthenticationException e) throws IOException, ServletException {
             httpServletResponse.setStatus(HttpStatus.UNAUTHORIZED.value());
             String message = e.getMessage();
             HashMap<String,Object> responseData=new HashMap<>(16);
             responseData.put("state","error");
-            responseData.put("error",HttpStatus.UNAUTHORIZED.value());
+            responseData.put("error", HttpStatus.UNAUTHORIZED.value());
             responseData.put("errorMessage",message);
             responseData.put("message","无效Token");
             WriteJsonUtil.writeJson(httpServletResponse, responseData);
